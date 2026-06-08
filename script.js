@@ -1,9 +1,6 @@
 (() => {
   const viewport = document.getElementById('viewport');
   const canvas = document.getElementById('canvas');
-  const resetBtn = document.getElementById('resetView');
-  const zoomInBtn = document.getElementById('zoomIn');
-  const zoomOutBtn = document.getElementById('zoomOut');
   const dialog = document.getElementById('infoDialog');
   const dialogTitle = document.getElementById('dialogTitle');
   const dialogText = document.getElementById('dialogText');
@@ -137,9 +134,6 @@
   });
 
   closeDialog.addEventListener('click', () => dialog.close());
-  resetBtn.addEventListener('click', fitView);
-  zoomOutBtn.addEventListener('click', () => zoomAt(window.innerWidth / 2, window.innerHeight / 2, state.scale / 1.22));
-  zoomInBtn.addEventListener('click', () => zoomAt(window.innerWidth / 2, window.innerHeight / 2, state.scale * 1.22));
   window.addEventListener('resize', fitView);
   window.addEventListener('load', fitView);
 
