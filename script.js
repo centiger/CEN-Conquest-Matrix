@@ -9,7 +9,7 @@
   const dialogText = document.getElementById('dialogText');
   const closeDialog = document.getElementById('closeDialog');
 
-  const base = { w: 887, h: 1773 };
+  const base = { w: 846, h: 1858 };
   const state = { scale: 1, minScale: 0.35, maxScale: 3.2, x: 0, y: 0 };
   const pointers = new Map();
   let lastTap = 0;
@@ -36,7 +36,7 @@
   function fitView() {
     const vw = viewport.clientWidth;
     const vh = viewport.clientHeight;
-    state.minScale = Math.min(vw / base.w, vh / base.h) * 0.92;
+    state.minScale = Math.min(vw / base.w, vh / base.h) * 0.88;
     fitScale = Math.max(vw / base.w, state.minScale);
     state.scale = fitScale;
     state.x = (vw - base.w * state.scale) / 2;
