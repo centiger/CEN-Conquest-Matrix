@@ -1,4 +1,4 @@
-const CACHE = 'cen-conquest-matrix-v17-hubnav';
+const CACHE = 'cen-conquest-matrix-v19-hubnav';
 const ASSETS = [
   './',
   './index.html',

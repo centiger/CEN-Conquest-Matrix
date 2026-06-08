@@ -109,7 +109,11 @@ function render(id){
     next.textContent=h.nextEra.label||'다음 시대';
     next.classList.add('next-era');
     next.onclick=()=>{ location.href=h.nextEra.url; };
-
+    // 마지막 세겜 언약 허브에서는 하단 Matrix 버튼도 다음 시대 Matrix로 보낸다.
+    if(matrix){
+      matrix.textContent='사사시대 Matrix';
+      matrix.onclick=()=>{ location.href=h.nextEra.url; };
+    }
   }else{
     next.textContent='Matrix';
     next.onclick=()=>{ location.href='../index.html'; };
